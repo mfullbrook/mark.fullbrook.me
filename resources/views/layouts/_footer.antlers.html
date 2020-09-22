@@ -1,0 +1,28 @@
+<div class="">
+    <div class="max-w-screen-xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+        <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
+            {{ nav:home }}
+                <div class="px-5 py-2">
+                    <a href="{{ url }}" class="text-base leading-6 text-gray-400 hover:text-gray-200">
+                        {{ title }}
+                    </a>
+                </div>
+            {{ /nav:home }}
+        </nav>
+        <div class="mt-8 flex justify-center">
+            {{ settings:social }}
+            <a href="{{ url }}" aria-label="{{ name }}" rel="noopener" class="ml-6 text-gray-400 hover:text-gray-200">
+                <span class="sr-only">{{ name }}</span>
+                {{ svg :src="svg_icon" }}
+            </a>
+            {{ /settings:social }}
+        </div>
+        <div class="mt-8">
+            <p class="text-center text-sm leading-6 text-gray-500">
+                &copy; {{ now format="Y" }} Mark Fullbrook &mdash; Powered by
+                <a class="hover:underline" href="https://statamic.dev">Statamic</a> and
+                <a class="hover:underline" href="https://tailwindcss.com">Tailwind</a>
+            </p>
+        </div>
+    </div>
+</div>

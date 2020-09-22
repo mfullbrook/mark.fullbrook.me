@@ -1,0 +1,61 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: site_name
+        field:
+          character_limit: 0
+          type: text
+          display: 'Site Name'
+      -
+        handle: social
+        field:
+          fields:
+            -
+              handle: name
+              field:
+                type: text
+                display: Name
+            -
+              handle: url
+              field:
+                character_limit: 0
+                type: text
+                display: URL
+            -
+              handle: svg_icon
+              field:
+                mode: grid
+                container: assets
+                folder: svg
+                restrict: false
+                allow_uploads: true
+                max_files: 1
+                type: assets
+                instructions: 'Upload an SVG file'
+                listable: hidden
+                display: 'SVG Icon'
+          mode: table
+          add_row: 'Add Link'
+          reorderable: true
+          type: grid
+          instructions: 'Set any social media links'
+          display: Social
+          listable: hidden
+      -
+        handle: primary
+        field:
+          input_type: text
+          type: text
+          width: 25
+          listable: hidden
+          display: 'Primary Class'
+      -
+        handle: body_bg
+        field:
+          input_type: text
+          type: text
+          width: 25
+          listable: hidden
+          display: 'Body Bg Class'

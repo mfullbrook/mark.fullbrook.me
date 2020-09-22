@@ -1,0 +1,14 @@
+title: Home
+tree:
+  -
+    title: Home
+    url: '/#top'
+  -
+    title: Articles
+    url: /articles
+  -
+    title: About
+    url: '/#about'
+  -
+    title: Work
+    url: '/#work'
