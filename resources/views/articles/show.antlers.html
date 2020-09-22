@@ -1,16 +1,19 @@
-<div class="max-w-5xl mx-auto relative mt-16 content">
-    {{ svg src="/assets/site/scratches" class="absolute text-gray-800 mt-8 top-0 left-0 w-20 hidden md:block" }}
-    <article class="lg:py-32 max-w-2xl mx-auto">
-        <h1>{{ title }}</h1>
-        <div class="bg-gray-800 inline-block text-sm mb-16 pr-4 pl-16 -ml-16 uppercase tracking-widest text-white py-1 rounded-r-full">
-            Published
-            {{ if topics }}
-                in {{ topics }}<a href="{{ url }}" class="text-teal-light no-underline hover:text-white">{{ title }}</a>{{ /topics }}
-            {{ /if }}
-            on {{ date format="M j, Y" }}
-        </div>
-        <div class="content">
-            {{ content | widont }}
-        </div>
-    </article>
+<div class="relative py-16 overflow-hidden">
+  {{ partial:articles/dots }}
+  <div class="relative px-4 sm:px-6 lg:px-8">
+    <div class="text-lg max-w-prose mx-auto mb-6">
+      <h1
+        class="mt-2 mb-12 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-100 sm:text-4xl sm:leading-10"
+      >
+        {{ title }}
+      </h1>
+      <div class="text-base text-center mb-12 pr-4 pl-16 -ml-16 text-gray-400">
+        <!-- prettier-ignore -->
+        Posted {{ if topics }} in {{ topics }}
+        <a href="{{ url }}" class="text-primary uppercase hover:text-white">{{ title }}</a>
+        {{ /topics }} {{ /if }} on {{ date format="M j, Y" }}
+      </div>
+    </div>
+    <div class="prose prose-lg mx-auto">{{ content | widont }}</div>
+  </div>
 </div>
