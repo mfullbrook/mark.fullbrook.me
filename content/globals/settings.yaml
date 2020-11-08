@@ -11,6 +11,10 @@ data:
       url: 'https://github.com/mfullbrook'
       svg_icon: svg/github.svg
     -
+      name: LinkedIn
+      url: 'https://www.linkedin.com/in/markcfullbrook/'
+      svg_icon: svg/linkedin.svg
+    -
       name: Instagram
       url: 'https://www.instagram.com/markfullbrook'
       svg_icon: svg/instagram.svg

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bc901797566f34f313c3ab735e575f64",
+    "content-hash": "85f0c3d0c8c936adaa8079b1babc3132",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2605,70 +2605,6 @@
             "time": "2020-08-30T16:15:20+00:00"
         },
         {
-            "name": "octoper/statamic-blade-components",
-            "version": "0.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/octoper/statamic-blade-components.git",
-                "reference": "4881f79fd13ab2d672eed819b26a29ff77ef4c6f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/octoper/statamic-blade-components/zipball/4881f79fd13ab2d672eed819b26a29ff77ef4c6f",
-                "reference": "4881f79fd13ab2d672eed819b26a29ff77ef4c6f",
-                "shasum": ""
-            },
-            "require": {
-                "statamic/cms": "^3.0@beta"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.16",
-                "nunomaduro/collision": "^4.2"
-            },
-            "type": "statamic-addon",
-            "extra": {
-                "statamic": {
-                    "name": "Blade Components",
-                    "description": "Integration for Blade components inside Statamic's Antler template engine"
-                },
-                "laravel": {
-                    "providers": [
-                        "Octoper\\BladeComponents\\ServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Octoper\\BladeComponents\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Vaggelis Yfantis",
-                    "email": "me@octoper.me",
-                    "homepage": "https://octoper.me",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Integration for Blade components inside Statamic's Antler template engine",
-            "keywords": [
-                "octoper",
-                "statamic-blade-components"
-            ],
-            "support": {
-                "issues": "https://github.com/octoper/statamic-blade-components/issues",
-                "source": "https://github.com/octoper/statamic-blade-components/tree/master"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/octoper",
-                    "type": "github"
-                }
-            ],
-            "time": "2020-08-26T20:14:56+00:00"
-        },
-        {
             "name": "opis/closure",
             "version": "3.5.7",
             "source": {
@@ -3641,17 +3577,59 @@
             "time": "2020-02-16T19:18:04+00:00"
         },
         {
-            "name": "statamic/cms",
-            "version": "v3.0.5",
+            "name": "spatie/statamic-responsive-images",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/statamic/cms.git",
-                "reference": "ef607cca6a722b6ac97419997f2ecaf1b5ab5ea1"
+                "url": "https://github.com/spatie/statamic-responsive-images.git",
+                "reference": "5ea8ce717d51919d1ee56acdb59c63308d0ec8dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/ef607cca6a722b6ac97419997f2ecaf1b5ab5ea1",
-                "reference": "ef607cca6a722b6ac97419997f2ecaf1b5ab5ea1",
+                "url": "https://api.github.com/repos/spatie/statamic-responsive-images/zipball/5ea8ce717d51919d1ee56acdb59c63308d0ec8dc",
+                "reference": "5ea8ce717d51919d1ee56acdb59c63308d0ec8dc",
+                "shasum": ""
+            },
+            "type": "statamic-addon",
+            "extra": {
+                "statamic": {
+                    "name": "Responsive Images",
+                    "description": "Responsive Images for Statamic 3"
+                },
+                "laravel": {
+                    "providers": [
+                        "Spatie\\ResponsiveImages\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\ResponsiveImages\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Responsive Images for Statamic 3",
+            "support": {
+                "issues": "https://github.com/spatie/statamic-responsive-images/issues",
+                "source": "https://github.com/spatie/statamic-responsive-images/tree/v1.3.0"
+            },
+            "time": "2020-10-05T07:58:18+00:00"
+        },
+        {
+            "name": "statamic/cms",
+            "version": "v3.0.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/statamic/cms.git",
+                "reference": "05676700555b3a9c9565d29b63b65d893ca55810"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/05676700555b3a9c9565d29b63b65d893ca55810",
+                "reference": "05676700555b3a9c9565d29b63b65d893ca55810",
                 "shasum": ""
             },
             "require": {
@@ -3713,13 +3691,17 @@
                 "laravel",
                 "statamic"
             ],
+            "support": {
+                "issues": "https://github.com/statamic/cms/issues",
+                "source": "https://github.com/statamic/cms/tree/v3.0.12"
+            },
             "funding": [
                 {
                     "url": "https://github.com/statamic",
                     "type": "github"
                 }
             ],
-            "time": "2020-09-04T22:36:56+00:00"
+            "time": "2020-09-22T21:09:51+00:00"
         },
         {
             "name": "statamic/ssg",
@@ -3760,6 +3742,10 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Static site generator for Statamic 3.",
+            "support": {
+                "issues": "https://github.com/statamic/ssg/issues",
+                "source": "https://github.com/statamic/ssg/tree/master"
+            },
             "time": "2020-08-21T21:18:00+00:00"
         },
         {

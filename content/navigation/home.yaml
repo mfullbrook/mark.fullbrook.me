@@ -7,8 +7,5 @@ tree:
     title: Articles
     url: /articles
   -
-    title: About
-    url: '/#about'
-  -
-    title: Work
-    url: '/#work'
+    title: Uses
+    url: /uses

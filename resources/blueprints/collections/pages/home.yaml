@@ -13,12 +13,18 @@ sections:
           validate:
             - required
       -
-        handle: hero_text
+        handle: hero_markdown
         field:
-          type: textarea
-          width: 50
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          display: 'Hero Markdown'
+          type: markdown
+          icon: markdown
           listable: hidden
-          display: 'Hero Text'
+          width: 50
       -
         handle: hero_image
         field:
