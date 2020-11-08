@@ -14,5 +14,5 @@ data:
       name: Instagram
       url: 'https://www.instagram.com/markfullbrook'
       svg_icon: svg/instagram.svg
-  primary: yellow
-  body_bg: gray-700
+  primary: pink-500
+  body_bg: gray-800

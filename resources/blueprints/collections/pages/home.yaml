@@ -13,26 +13,25 @@ sections:
           validate:
             - required
       -
-        handle: subtitle
+        handle: hero_text
         field:
-          character_limit: 0
-          type: text
-          display: Subtitle
+          type: textarea
+          width: 50
+          listable: hidden
+          display: 'Hero Text'
       -
-        handle: content
+        handle: hero_image
         field:
+          mode: grid
+          container: assets
+          folder: images
           restrict: false
-          automatic_line_breaks: true
-          automatic_links: false
-          escape_markup: true
-          smartypants: false
-          type: markdown
-          display: Content
-      -
-        handle: template
-        field:
-          type: template
-          display: Template
+          allow_uploads: true
+          max_files: 1
+          type: assets
+          width: 50
+          listable: hidden
+          display: 'Hero Image'
       -
         handle: layout
         field:
@@ -60,3 +59,8 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+      -
+        handle: template
+        field:
+          type: template
+          display: Template

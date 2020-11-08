@@ -1,7 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme")
 const uiColors = require("@tailwindcss/ui/colors")
 module.exports = {
-  purge: ["./resources/**/*.html", "./content/globals/settings.yaml"],
+  purge: ["./resources/**/*.html"],
   theme: {
     screens: {
       sm: "400px",
@@ -15,11 +15,15 @@ module.exports = {
           ...uiColors.yellow,
           default: "#fcfe75",
         },
-        primary: "#fcfe75",
+        primary: uiColors.pink["500"],
       },
       fontFamily: (theme) => ({
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       }),
+      boxShadow: {
+        "outline-primary-rings":
+          "0 0 0 10px rgba(231, 70, 148, 0.5), 0 0 0 20px rgba(231, 70, 148, 0.2)",
+      },
     },
     typography: (theme) => ({
       default: {
@@ -42,6 +46,19 @@ module.exports = {
           },
           blockquote: {
             color: theme("colors.gray.200"),
+          },
+          ol: {
+            counterReset: null,
+            listStyleType: "decimal",
+            listStylePosition: "inside",
+          },
+          "ol > li": {
+            counterIncrement: null,
+            position: "relative",
+          },
+          "ol > li::before": null,
+          code: {
+            color: theme("colors.pink.600"),
           },
         },
       },

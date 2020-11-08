@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "664c7de6344c07ce0c86aae5373d580c",
+    "content-hash": "bc901797566f34f313c3ab735e575f64",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2603,6 +2603,70 @@
                 "php"
             ],
             "time": "2020-08-30T16:15:20+00:00"
+        },
+        {
+            "name": "octoper/statamic-blade-components",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/octoper/statamic-blade-components.git",
+                "reference": "4881f79fd13ab2d672eed819b26a29ff77ef4c6f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/octoper/statamic-blade-components/zipball/4881f79fd13ab2d672eed819b26a29ff77ef4c6f",
+                "reference": "4881f79fd13ab2d672eed819b26a29ff77ef4c6f",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "^3.0@beta"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "nunomaduro/collision": "^4.2"
+            },
+            "type": "statamic-addon",
+            "extra": {
+                "statamic": {
+                    "name": "Blade Components",
+                    "description": "Integration for Blade components inside Statamic's Antler template engine"
+                },
+                "laravel": {
+                    "providers": [
+                        "Octoper\\BladeComponents\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Octoper\\BladeComponents\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Vaggelis Yfantis",
+                    "email": "me@octoper.me",
+                    "homepage": "https://octoper.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integration for Blade components inside Statamic's Antler template engine",
+            "keywords": [
+                "octoper",
+                "statamic-blade-components"
+            ],
+            "support": {
+                "issues": "https://github.com/octoper/statamic-blade-components/issues",
+                "source": "https://github.com/octoper/statamic-blade-components/tree/master"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/octoper",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-08-26T20:14:56+00:00"
         },
         {
             "name": "opis/closure",
@@ -8978,5 +9042,5 @@
         "php": "^7.2.5"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
