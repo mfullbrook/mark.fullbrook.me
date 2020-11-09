@@ -11,13 +11,11 @@
           <nav class="flex items-center justify-between">
             <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
               <div class="flex items-center justify-between w-full md:w-auto">
-                <a
-                  href="/"
-                  aria-label="Home"
-                  class="flex items-center text-{{ settings:primary }} font-mono text-xl"
-                >
+                <a href="/" aria-label="Home" class="flex items-center">
                   {{ partial:layouts/logo_mark }}
-                  <span class="pl-3 hidden md:block">mark.fullbrook</span>
+                  <span class="pl-3 hidden md:block text-{{ settings:primary }} font-mono text-xl"
+                    >mark.fullbrook</span
+                  >
                 </a>
                 <div class="-mr-2 flex items-center sm:hidden">
                   <button

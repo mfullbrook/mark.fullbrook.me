@@ -1,7 +1,11 @@
-<div class="max-w-5xl mx-auto relative mt-16 content">
-  <img src="/img/scratches.svg" class="absolute top-0 mt-8 left-0 w-20 hidden md:block" />
-  <article class="py-32 max-w-2xl mx-auto content">
+<div class="max-w-3xl mx-auto relative mt-10">
+  <article class="py-10">
     <h1>{{ title }}</h1>
-    {{ content | widont }}
+    {{ if intro }}
+    <div class="prose mx-auto max-w-3xl mb-10">{{ intro | widont }}</div>
+    {{ /if }}
+    <!-- prettier-ignore -->
+    {{ responsive:image ratio="16/9" class="mb-10" }}
+    <div class="prose mx-auto max-w-3xl">{{ content | widont }}</div>
   </article>
 </div>

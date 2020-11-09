@@ -28,6 +28,12 @@ module.exports = {
     typography: (theme) => ({
       default: {
         css: {
+          "code::before": {
+            content: "",
+          },
+          "code::after": {
+            content: "",
+          },
           color: theme("colors.gray.300"),
           a: {
             color: theme("colors.primary"),
@@ -59,6 +65,9 @@ module.exports = {
           "ol > li::before": null,
           code: {
             color: theme("colors.pink.600"),
+          },
+          pre: {
+            fontSize: "1em",
           },
         },
       },

@@ -13,6 +13,30 @@ sections:
           validate:
             - required
       -
+        handle: intro
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          display: Intro
+          type: markdown
+          icon: markdown
+          listable: hidden
+      -
+        handle: image
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: Image
+          type: assets
+          icon: assets
+          listable: hidden
+      -
         handle: content
         field:
           restrict: false
@@ -22,6 +46,8 @@ sections:
           smartypants: false
           type: markdown
           display: Content
+          listable: hidden
+          container: assets
   sidebar:
     display: Sidebar
     fields:
