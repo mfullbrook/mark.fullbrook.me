@@ -3,8 +3,8 @@ import "@fontsource-variable/inter";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mark Fullbrook — AI engineer, leader and founder",
-  description: "Mark Fullbrook builds practical AI products, leads engineering teams and is the founder of Robin.",
+  title: "Mark Fullbrook — AI engineer and engineering leader",
+  description: "Mark Fullbrook is a principal generative-AI engineer and engineering leader focused on production AI in financial services and independent product development.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

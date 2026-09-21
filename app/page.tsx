@@ -50,16 +50,16 @@ export default function Home() {
 
       <section className="hero wrap" id="top">
         <div className="hero-copy">
-          <p className="status"><span aria-hidden="true" /> Based near London, building practical AI</p>
-          <h1>I build AI products that have to work in the real world.</h1>
+          <p className="status"><span aria-hidden="true" /> Principal GenAI engineer · engineering leader · product builder</p>
+          <h1>I build AI systems that survive real data, real users and real constraints.</h1>
           <p className="intro">
-            I’m Mark Fullbrook — a principal AI engineer, engineering leader and founder. I turn difficult, regulated problems into software people can actually use.
+            I’m Mark Fullbrook, a principal generative-AI engineer and engineering leader. I work across architecture, evaluation, security and adoption, turning complex ideas into products people can trust and use. Today I focus on production generative AI in financial services. Independently, I’m developing Robin, an AI phone agent for small businesses.
           </p>
           <div className="hero-links">
             <a className="primary-link" href="https://www.linkedin.com/in/markcfullbrook/" target="_blank" rel="noreferrer">
               Connect on LinkedIn <ArrowIcon />
             </a>
-            <a href="https://github.com/mfullbrook" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://github.com/mfullbrook" target="_blank" rel="noreferrer">View GitHub</a>
           </div>
         </div>
 
@@ -70,15 +70,15 @@ export default function Home() {
           </div>
           <div className="signal-line">
             <span className="signal-index">01</span>
-            <div><strong>Applied generative AI</strong><p>Systems that survive contact with enterprise data, risk and users.</p></div>
+            <div><strong>Production generative AI</strong><p>Reliable systems built around enterprise data, risk and users.</p></div>
           </div>
           <div className="signal-line">
             <span className="signal-index">02</span>
-            <div><strong>Robin</strong><p>An AI phone agent designed around the reality of running a small business.</p></div>
+            <div><strong>Robin</strong><p>An independent AI phone agent for owner-operated businesses.</p></div>
           </div>
           <div className="signal-line">
             <span className="signal-index">03</span>
-            <div><strong>Founder mode</strong><p>Talking to customers, testing assumptions and shipping the smallest useful thing.</p></div>
+            <div><strong>Independent product development</strong><p>Turning customer problems into small, testable products.</p></div>
           </div>
         </aside>
       </section>
@@ -86,8 +86,8 @@ export default function Home() {
       <section className="work-section wrap" id="work">
         <div className="section-intro">
           <p className="section-kicker">The work</p>
-          <h2>Engineering, leadership and a bias for shipping.</h2>
-          <p>I’ve spent my career moving between the system and the organisation around it. These days, that means building trustworthy AI inside financial services while creating my own products outside it.</p>
+          <h2>From architecture to adoption.</h2>
+          <p>I’ve spent my career designing systems, leading teams and turning difficult technology into working products. Today that means building production generative AI in a regulated environment.</p>
         </div>
         <div className="timeline">
           {career.map((item) => (
@@ -101,11 +101,11 @@ export default function Home() {
 
       <section className="build-section" aria-labelledby="building-title">
         <div className="wrap build-grid">
-          <div className="build-number" aria-hidden="true">10→100</div>
+          <div className="build-number" aria-hidden="true">CALL → ACTION</div>
           <div className="build-copy">
-            <p className="section-kicker">What I’m building</p>
+            <p className="section-kicker">Independent project</p>
             <h2 id="building-title">Robin answers the phone when a small business can’t.</h2>
-            <p>It’s an AI phone agent for owner-operated businesses: handle the call, understand what the customer needs, and make sure the right person gets the right information. I’m currently working toward the first ten customers — then the next hundred.</p>
+            <p>Robin is an AI phone agent for owner-operated businesses. It answers calls, understands what the caller needs, captures the right information and makes the next step clear. I’m currently validating it with small-business owners.</p>
             <a href="https://robinhq.co" target="_blank" rel="noreferrer">Visit Robin <ArrowIcon /></a>
           </div>
         </div>
@@ -114,7 +114,7 @@ export default function Home() {
       <section className="thinking-section wrap" id="thinking">
         <div className="section-intro compact">
           <p className="section-kicker">How I think</p>
-          <h2>Technology is the easy part. Useful is harder.</h2>
+          <h2>The hard part starts after the model works.</h2>
         </div>
         <div className="principles">
           {principles.map(([title, words]) => (
@@ -125,13 +125,13 @@ export default function Home() {
 
       <footer id="contact">
         <div className="wrap footer-grid">
-          <div><p className="section-kicker">Say hello</p><h2>Interested in practical AI, product engineering or the founder journey?</h2></div>
+          <div><p className="section-kicker">Say hello</p><h2>Interested in production AI, product engineering or turning difficult problems into useful software?</h2></div>
           <div className="footer-links">
             <a href="https://www.linkedin.com/in/markcfullbrook/" target="_blank" rel="noreferrer">LinkedIn <ArrowIcon /></a>
             <a href="https://github.com/mfullbrook" target="_blank" rel="noreferrer">GitHub <ArrowIcon /></a>
           </div>
         </div>
-        <div className="wrap colophon"><span>© {new Date().getFullYear()} Mark Fullbrook</span><span>Engineer · leader · founder</span></div>
+        <div className="wrap colophon"><span>© {new Date().getFullYear()} Mark Fullbrook</span><span>AI engineer · engineering leader · product builder</span></div>
       </footer>
     </main>
   );
