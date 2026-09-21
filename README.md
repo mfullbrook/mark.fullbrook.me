@@ -7,16 +7,17 @@ Static personal site built with Next.js and ready for Vercel.
 Drop a complete, self-contained HTML document into:
 
 ```text
-public/pages/<slug>/index.html
+public/pages/<slug>.html
 ```
 
 It is served unchanged at:
 
 ```text
-https://mark.fullbrook.me/pages/<slug>/
+https://mark.fullbrook.me/pages/<slug>.html
 ```
 
-For example, `public/pages/ai-notes/index.html` becomes
+For example, `public/pages/ai-notes.html` becomes `/pages/ai-notes.html`.
+Folder-based pages also work: `public/pages/ai-notes/index.html` becomes
 `/pages/ai-notes/`. These pages do not use the site's React layout,
 navigation, styles, or other wrapper—they are the exact HTML files you add.
 
