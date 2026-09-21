@@ -2,6 +2,32 @@
 
 Static personal site built with Next.js and ready for Vercel.
 
+## Publishing standalone HTML pages
+
+Drop a complete, self-contained HTML document into:
+
+```text
+public/pages/<slug>/index.html
+```
+
+It is served unchanged at:
+
+```text
+https://mark.fullbrook.me/pages/<slug>/
+```
+
+For example, `public/pages/ai-notes/index.html` becomes
+`/pages/ai-notes/`. These pages do not use the site's React layout,
+navigation, styles, or other wrapper—they are the exact HTML files you add.
+
+Keep page-specific assets alongside the page (for example,
+`public/pages/ai-notes/chart.png`) and reference them with relative URLs in
+the HTML (`chart.png`). This keeps each generated page portable.
+
+There is currently no Next.js middleware or proxy in this project. If one is
+added later, exclude `^/pages(?:/.*)?$` from it so these standalone pages
+continue to be served directly.
+
 ## Deploy using GitHub
 
 1. Extract this ZIP.
