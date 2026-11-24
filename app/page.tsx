@@ -47,22 +47,22 @@ type Project = {
 
 const citiProjects: Project[] = [
   {
-    name: "Ask Markets",
-    meta: "2026 · Architecture and engineering lead",
+    name: "Agentic AI platform for Markets",
+    meta: "2025–now · Markets Technology",
     detail:
-      "An agentic AI platform that brings governed data, tools and workflows to Markets teams, in Microsoft Teams and on the web. It went from concept to production in nine months and is rolling out to 1,500 users.",
+      "Brings governed data, tools and AI-assisted workflows into the daily work of Citi’s Markets teams, in Microsoft Teams and on the web. I lead the architecture and engineering, and it’s rolling out to 1,500 users.",
   },
   {
-    name: "Orion",
-    meta: "2024–25 · Generative AI Engineering Manager",
+    name: "Document drafting for underwriters",
+    meta: "2024–25 · Innovation Labs",
     detail:
-      "One of Citi’s earliest production generative AI products. It drafts structured documents grounded in retrieval, and 2,000 underwriters use it every day to produce more than 600 documents a month.",
+      "One of Citi’s earliest production generative AI products. It drafts structured documents using retrieval across structured and unstructured information, and 2,000 underwriters use it every day to produce more than 600 documents a month.",
   },
   {
-    name: "MAC Remediation",
-    meta: "2022–23 · SVP Engineering Lead",
+    name: "Legal agreement remediation",
+    meta: "2021–23 · Innovation Labs",
     detail:
-      "An AI-enabled platform that supported the remediation of thousands of legal agreements for a major regulatory programme. I led the team of 12 that took it from inception to production.",
+      "An AI-enabled data platform that supported the remediation of thousands of legal agreements in a major regulatory programme. I led the global team of 12 engineers that took it from inception to production.",
   },
 ];
 
@@ -174,7 +174,7 @@ export default function Home() {
           </div>
           <div className="signal-line">
             <span className="signal-index">01</span>
-            <div><strong>Ask Markets</strong><p>My day job: an agentic AI platform for Citi’s Markets teams.</p></div>
+            <div><strong>Markets AI platform</strong><p>My day job: an agentic AI platform for Citi’s Markets teams.</p></div>
           </div>
           <div className="signal-line">
             <span className="signal-index">02</span>
