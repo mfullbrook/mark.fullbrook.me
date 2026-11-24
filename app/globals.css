@@ -90,6 +90,19 @@ h1 { margin: 0; max-width: 840px; font-family: var(--font-display); font-size: c
 .timeline-item h3 { margin: 0 0 10px; font-size: 1.15rem; font-weight: 600; letter-spacing: -.02em; }
 .timeline-item p { margin: 0; max-width: 640px; color: var(--muted); }
 
+.projects-section { padding-block: 128px; border-top: 1px solid var(--line); }
+.project-group { margin-top: 72px; }
+.project-group h3 { margin: 0 0 22px; color: var(--muted); font-size: .95rem; font-weight: 600; }
+.projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(28px, 4vw, 56px); }
+.projects article { display: flex; flex-direction: column; align-items: flex-start; padding: 26px 0 38px; border-top: 1px solid var(--line); }
+.project-meta { color: var(--signal); font-size: 12px; line-height: 1.8; font-variant-numeric: tabular-nums; }
+.projects h4 { margin: 10px 0 10px; font-size: 1.15rem; font-weight: 600; letter-spacing: -.02em; }
+.projects p { margin: 0; color: var(--muted); }
+.projects a { display: inline-flex; align-items: center; gap: 10px; margin-top: 16px; color: var(--paper); font-size: .9rem; transition-property: color, scale; transition-duration: 150ms; }
+.projects a svg { width: 14px; height: 14px; }
+.projects a:hover { color: var(--signal); }
+.projects a:active { scale: .96; }
+
 .build-section { background: var(--paper); color: var(--ink); }
 .build-grid { display: grid; grid-template-columns: 1.2fr .8fr; align-items: start; gap: clamp(70px, 10vw, 150px); padding-block: 128px; }
 .build-section .section-kicker { color: #087b8d; }
@@ -114,6 +127,7 @@ a:focus-visible { outline: 2px solid var(--signal); outline-offset: 5px; }
   .signal { max-width: 580px; }
   .work-section, .build-grid { grid-template-columns: 1fr; }
   .build-copy { padding-top: 0; }
+  .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 620px) {
@@ -126,9 +140,16 @@ a:focus-visible { outline: 2px solid var(--signal); outline-offset: 5px; }
   .intro { margin-top: 32px; }
   .hero-links { align-items: flex-start; flex-direction: column; gap: 20px; }
   .work-section, .build-grid { padding-block: 92px; gap: 44px; }
+  .projects-section { padding-block: 92px; }
+  .project-group { margin-top: 52px; }
+  .projects { grid-template-columns: 1fr; }
+  .projects article { padding-bottom: 30px; }
   .timeline-item { grid-template-columns: 64px 1fr; gap: 14px; }
   footer { padding-top: 84px; }
   .colophon { margin-top: 72px; gap: 20px; flex-direction: column; }
+}
+@media (max-width: 380px) {
+  nav { gap: 12px; font-size: .8rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
