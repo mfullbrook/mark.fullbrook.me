@@ -1,138 +1,147 @@
-const career = [
+const LINKEDIN = "https://www.linkedin.com/in/markcfullbrook/";
+const GITHUB = "https://github.com/mfullbrook";
+const ROBIN = "https://robinhq.co";
+
+const roles = [
   {
     period: "Now",
     title: "Principal Generative AI Software Engineer, Citi",
     detail:
-      "Building production AI products in a tightly regulated bank — from retrieval and orchestration to evaluation, security and the last mile of adoption.",
+      "I build generative AI products that run in production at the bank. That covers retrieval, orchestration, evaluation and security, and then the work of getting people to use what we’ve built.",
   },
   {
     period: "2021–25",
     title: "Engineering leader",
     detail:
-      "Led cross-functional engineering teams across London, New York, Tel Aviv and Shanghai. Grew organisations, shipped platforms and stayed close enough to the code to know where the sharp edges were.",
+      "I led cross-functional engineering teams in London, New York, Tel Aviv and Shanghai. I grew the teams and shipped platforms, and stayed close to the code throughout.",
   },
   {
     period: "2016–21",
     title: "Director, family business",
     detail:
-      "Helped run a 65-person company and modernised the systems underneath it. A practical education in operations, people, cash flow and why software only matters when it changes the work.",
+      "I helped run a 65-person company and modernised the systems it ran on. It’s where I learned operations, people and cash flow first-hand.",
   },
 ];
 
-const principles = [
-  ["Make it real", "A useful system in production teaches more than a perfect diagram."],
-  ["Earn trust", "AI products need evidence, guardrails and a clear answer to ‘why should I rely on this?’"],
-  ["Stay close", "The best technical leaders understand the code, the customer and the constraint."],
-] as const;
+const notes = [
+  {
+    href: "/pages/ai-data-safety-uk.html",
+    period: "Sep 2026",
+    title: "AI vendor data safety: a UK reference",
+    detail:
+      "How Anthropic, OpenAI, Google, Microsoft and xAI handle training, retention and UK data residency, for anyone deciding which AI products are safe for company data. Compiled from vendor documentation.",
+  },
+];
 
-function ArrowIcon() {
+function LogoMark() {
   return (
-    <svg aria-hidden="true" viewBox="0 0 16 16" fill="none">
-      <path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <svg className="logo-mark" viewBox="0 0 100 90" aria-hidden="true">
+      <rect className="logo-tile" width="100" height="90" />
+      <g className="logo-glyph">
+        <g transform="translate(16.75 14)">
+          <rect x="-4.25" y="41.25" width="42.25" height="8" rx="2.75" transform="rotate(-45 17 44)" />
+          <rect x="-4.25" y="14.25" width="42.25" height="8" rx="2.75" transform="rotate(45 17 17)" />
+        </g>
+        <rect x="50.5" y="69.75" width="32.31" height="8" rx="2.75" />
+      </g>
     </svg>
+  );
+}
+
+function External({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <a href={href} target="_blank" rel="noreferrer">
+      {children}
+    </a>
   );
 }
 
 export default function Home() {
   return (
-    <main>
-      <header className="site-header wrap">
-        <a className="wordmark" href="#top" aria-label="Mark Fullbrook, home">
-          <span className="mark"><span>MF</span></span>
-          <span>Mark Fullbrook</span>
+    <div className="page">
+      <header className="site-header">
+        <a className="wordmark" href="/" aria-label="Mark Fullbrook, home">
+          <LogoMark />
+          <span>mark.fullbrook</span>
         </a>
-        <nav aria-label="Primary navigation">
-          <a href="#work">Work</a>
-          <a href="#thinking">Thinking</a>
-          <a href="#contact">Contact</a>
+        <nav aria-label="Elsewhere">
+          <External href={LINKEDIN}>LinkedIn</External>
+          <External href={GITHUB}>GitHub</External>
         </nav>
       </header>
 
-      <section className="hero wrap" id="top">
-        <div className="hero-copy">
-          <p className="status"><span aria-hidden="true" /> Principal GenAI engineer · engineering leader · product builder</p>
-          <h1>I build AI systems that survive real data, real users and real constraints.</h1>
-          <p className="intro">
-            I’m Mark Fullbrook, a principal generative-AI engineer and engineering leader. I work across architecture, evaluation, security and adoption, turning complex ideas into products people can trust and use. Today I focus on production generative AI in financial services. Independently, I’m developing Robin, an AI phone agent for small businesses.
+      <main>
+        <section className="hero">
+          <h1>
+            I’m <span className="name">Mark</span>, a principal engineer building generative AI
+            products at a bank.
+          </h1>
+          <p>
+            Before this I led engineering teams in four cities, and before that I helped run my
+            family’s business. In my own time I’m building Robin, an AI phone agent for small
+            businesses.
           </p>
-          <div className="hero-links">
-            <a className="primary-link" href="https://www.linkedin.com/in/markcfullbrook/" target="_blank" rel="noreferrer">
-              Connect on LinkedIn <ArrowIcon />
-            </a>
-            <a href="https://github.com/mfullbrook" target="_blank" rel="noreferrer">View GitHub</a>
-          </div>
-        </div>
+        </section>
 
-        <aside className="signal" aria-label="Current focus">
-          <div className="signal-head">
-            <span>Current focus</span>
-            <span className="live"><i /> active</span>
-          </div>
-          <div className="signal-line">
-            <span className="signal-index">01</span>
-            <div><strong>Production generative AI</strong><p>Reliable systems built around enterprise data, risk and users.</p></div>
-          </div>
-          <div className="signal-line">
-            <span className="signal-index">02</span>
-            <div><strong>Robin</strong><p>An independent AI phone agent for owner-operated businesses.</p></div>
-          </div>
-          <div className="signal-line">
-            <span className="signal-index">03</span>
-            <div><strong>Independent product development</strong><p>Turning customer problems into small, testable products.</p></div>
-          </div>
-        </aside>
-      </section>
+        <section className="block" aria-labelledby="work">
+          <h2 id="work">Work</h2>
+          <ol className="entries">
+            {roles.map((role) => (
+              <li key={role.period}>
+                <div className="entry-head">
+                  <h3>{role.title}</h3>
+                  <span className="period">{role.period}</span>
+                </div>
+                <p>{role.detail}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
 
-      <section className="work-section wrap" id="work">
-        <div className="section-intro">
-          <p className="section-kicker">The work</p>
-          <h2>From architecture to adoption.</h2>
-          <p>I’ve spent my career designing systems, leading teams and turning difficult technology into working products. Today that means building production generative AI in a regulated environment.</p>
-        </div>
-        <div className="timeline">
-          {career.map((item) => (
-            <article className="timeline-item" key={item.period}>
-              <span className="period">{item.period}</span>
-              <div><h3>{item.title}</h3><p>{item.detail}</p></div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="build-section" aria-labelledby="building-title">
-        <div className="wrap build-grid">
-          <div className="build-number" aria-hidden="true">CALL → ACTION</div>
-          <div className="build-copy">
-            <p className="section-kicker">Independent project</p>
-            <h2 id="building-title">Robin answers the phone when a small business can’t.</h2>
-            <p>Robin is an AI phone agent for owner-operated businesses. It answers calls, understands what the caller needs, captures the right information and makes the next step clear. I’m currently validating it with small-business owners.</p>
-            <a href="https://robinhq.co" target="_blank" rel="noreferrer">Visit Robin <ArrowIcon /></a>
+        <section className="block" aria-labelledby="robin">
+          <h2 id="robin">Robin</h2>
+          <div className="prose">
+            <p className="lead">Robin answers the phone when a small business can’t.</p>
+            <p>
+              It’s an AI phone agent for owner-run businesses. It picks up the call, finds out what
+              the caller needs, takes their details and tells them what happens next. I’m building
+              it on my own and testing it with small-business owners now.
+            </p>
+            <p>
+              <External href={ROBIN}>robinhq.co</External>
+            </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="thinking-section wrap" id="thinking">
-        <div className="section-intro compact">
-          <p className="section-kicker">How I think</p>
-          <h2>The hard part starts after the model works.</h2>
-        </div>
-        <div className="principles">
-          {principles.map(([title, words]) => (
-            <article key={title}><h3>{title}</h3><p>{words}</p></article>
-          ))}
-        </div>
-      </section>
+        <section className="block" aria-labelledby="notes">
+          <h2 id="notes">Notes</h2>
+          <ul className="entries">
+            {notes.map((note) => (
+              <li key={note.href}>
+                <div className="entry-head">
+                  <h3>
+                    <a href={note.href}>{note.title}</a>
+                  </h3>
+                  <span className="period">{note.period}</span>
+                </div>
+                <p>{note.detail}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-      <footer id="contact">
-        <div className="wrap footer-grid">
-          <div><p className="section-kicker">Say hello</p><h2>Interested in production AI, product engineering or turning difficult problems into useful software?</h2></div>
-          <div className="footer-links">
-            <a href="https://www.linkedin.com/in/markcfullbrook/" target="_blank" rel="noreferrer">LinkedIn <ArrowIcon /></a>
-            <a href="https://github.com/mfullbrook" target="_blank" rel="noreferrer">GitHub <ArrowIcon /></a>
+        <section className="block" aria-labelledby="contact">
+          <h2 id="contact">Contact</h2>
+          <div className="prose">
+            <p>
+              The best place to reach me is <External href={LINKEDIN}>LinkedIn</External>. My code
+              is on <External href={GITHUB}>GitHub</External>.
+            </p>
           </div>
-        </div>
-        <div className="wrap colophon"><span>© {new Date().getFullYear()} Mark Fullbrook</span><span>AI engineer · engineering leader · product builder</span></div>
-      </footer>
-    </main>
+        </section>
+      </main>
+
+      <footer className="site-footer">© {new Date().getFullYear()} Mark Fullbrook</footer>
+    </div>
   );
 }

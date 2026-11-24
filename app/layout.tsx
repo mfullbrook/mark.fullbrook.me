@@ -1,14 +1,32 @@
-import type { Metadata } from "next";
-import "@fontsource-variable/manrope";
+import type { Metadata, Viewport } from "next";
+import "@fontsource-variable/ibm-plex-sans/wght.css";
+import "@fontsource/ibm-plex-mono/latin-400.css";
 import "./globals.css";
 
+const description =
+  "Mark Fullbrook is a principal engineer building generative AI products in financial services, and the developer of Robin, an AI phone agent for small businesses.";
+
 export const metadata: Metadata = {
-  title: "Mark Fullbrook — AI engineer and engineering leader",
-  description: "Mark Fullbrook is a principal generative-AI engineer and engineering leader focused on production AI in financial services and independent product development.",
+  metadataBase: new URL("https://mark.fullbrook.me"),
+  title: "Mark Fullbrook",
+  description,
+  openGraph: {
+    title: "Mark Fullbrook",
+    description,
+    url: "/",
+    type: "website",
+  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fbfbfc" },
+    { media: "(prefers-color-scheme: dark)", color: "#161e2e" },
+  ],
 };
 
 export default function RootLayout({
@@ -17,12 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet" />
-      </head>
+    <html lang="en-GB">
       <body>{children}</body>
     </html>
   );
