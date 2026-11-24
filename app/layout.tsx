@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Mark Fullbrook — AI engineer and engineering leader",
-  description: "Mark Fullbrook is a principal generative-AI engineer and engineering leader focused on production AI in financial services and independent product development.",
+  description: "Mark Fullbrook is a principal engineer building generative AI products in financial services, and the developer of Robin, an AI phone agent for small businesses.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
