@@ -1,8 +1,11 @@
+import { EmailLink } from "./email-link";
+
 const LINKEDIN = "https://www.linkedin.com/in/markcfullbrook/";
 const GITHUB = "https://github.com/mfullbrook";
+const CV = "https://cv.fullbrook.me";
 const ROBIN = "https://robinhq.co";
 
-const roles = [
+const career = [
   {
     period: "Now",
     title: "Principal Generative AI Software Engineer, Citi",
@@ -23,125 +26,105 @@ const roles = [
   },
 ];
 
-const notes = [
-  {
-    href: "/pages/ai-data-safety-uk.html",
-    period: "Sep 2026",
-    title: "AI vendor data safety: a UK reference",
-    detail:
-      "How Anthropic, OpenAI, Google, Microsoft and xAI handle training, retention and UK data residency, for anyone deciding which AI products are safe for company data. Compiled from vendor documentation.",
-  },
-];
-
-function LogoMark() {
+function ArrowIcon() {
   return (
-    <svg className="logo-mark" viewBox="0 0 100 90" aria-hidden="true">
-      <rect className="logo-tile" width="100" height="90" />
-      <g className="logo-glyph">
-        <g transform="translate(16.75 14)">
-          <rect x="-4.25" y="41.25" width="42.25" height="8" rx="2.75" transform="rotate(-45 17 44)" />
-          <rect x="-4.25" y="14.25" width="42.25" height="8" rx="2.75" transform="rotate(45 17 17)" />
-        </g>
-        <rect x="50.5" y="69.75" width="32.31" height="8" rx="2.75" />
-      </g>
+    <svg aria-hidden="true" viewBox="0 0 16 16" fill="none">
+      <path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
-  );
-}
-
-function External({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <a href={href} target="_blank" rel="noreferrer">
-      {children}
-    </a>
   );
 }
 
 export default function Home() {
   return (
-    <div className="page">
-      <header className="site-header">
-        <a className="wordmark" href="/" aria-label="Mark Fullbrook, home">
-          <LogoMark />
-          <span>mark.fullbrook</span>
+    <main>
+      <header className="site-header wrap">
+        <a className="wordmark" href="#top" aria-label="Mark Fullbrook, home">
+          <span className="mark"><span>MF</span></span>
+          <span>Mark Fullbrook</span>
         </a>
-        <nav aria-label="Elsewhere">
-          <External href={LINKEDIN}>LinkedIn</External>
-          <External href={GITHUB}>GitHub</External>
+        <nav aria-label="Primary navigation">
+          <a href="#work">Work</a>
+          <a href="#robin">Robin</a>
+          <a href={CV} target="_blank" rel="noreferrer">CV</a>
+          <a href="#contact">Contact</a>
         </nav>
       </header>
 
-      <main>
-        <section className="hero">
-          <h1>
-            I’m <span className="name">Mark</span>, a principal engineer building generative AI
-            products at a bank.
-          </h1>
-          <p>
-            Before this I led engineering teams in four cities, and before that I helped run my
-            family’s business. In my own time I’m building Robin, an AI phone agent for small
-            businesses.
+      <section className="hero wrap" id="top">
+        <div className="hero-copy">
+          <p className="status"><span aria-hidden="true" /> Mark Fullbrook · Principal generative AI engineer</p>
+          <h1>I build generative AI products at a bank.</h1>
+          <p className="intro">
+            Before this I led engineering teams in four cities, and before that I helped run my family’s business. In my own time I’m building Robin, an AI phone agent for small businesses.
           </p>
-        </section>
-
-        <section className="block" aria-labelledby="work">
-          <h2 id="work">Work</h2>
-          <ol className="entries">
-            {roles.map((role) => (
-              <li key={role.period}>
-                <div className="entry-head">
-                  <h3>{role.title}</h3>
-                  <span className="period">{role.period}</span>
-                </div>
-                <p>{role.detail}</p>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        <section className="block" aria-labelledby="robin">
-          <h2 id="robin">Robin</h2>
-          <div className="prose">
-            <p className="lead">Robin answers the phone when a small business can’t.</p>
-            <p>
-              It’s an AI phone agent for owner-run businesses. It picks up the call, finds out what
-              the caller needs, takes their details and tells them what happens next. I’m building
-              it on my own and testing it with small-business owners now.
-            </p>
-            <p>
-              <External href={ROBIN}>robinhq.co</External>
-            </p>
+          <div className="hero-links">
+            <a className="primary-link" href={LINKEDIN} target="_blank" rel="noreferrer">
+              Connect on LinkedIn <ArrowIcon />
+            </a>
+            <a href={CV} target="_blank" rel="noreferrer">Read my CV</a>
+            <a href={GITHUB} target="_blank" rel="noreferrer">View GitHub</a>
           </div>
-        </section>
+        </div>
 
-        <section className="block" aria-labelledby="notes">
-          <h2 id="notes">Notes</h2>
-          <ul className="entries">
-            {notes.map((note) => (
-              <li key={note.href}>
-                <div className="entry-head">
-                  <h3>
-                    <a href={note.href}>{note.title}</a>
-                  </h3>
-                  <span className="period">{note.period}</span>
-                </div>
-                <p>{note.detail}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="block" aria-labelledby="contact">
-          <h2 id="contact">Contact</h2>
-          <div className="prose">
-            <p>
-              The best place to reach me is <External href={LINKEDIN}>LinkedIn</External>. My code
-              is on <External href={GITHUB}>GitHub</External>.
-            </p>
+        <aside className="signal" aria-label="Current focus">
+          <div className="signal-head">
+            <span>Current focus</span>
+            <span className="live"><i /> active</span>
           </div>
-        </section>
-      </main>
+          <div className="signal-line">
+            <span className="signal-index">01</span>
+            <div><strong>Generative AI in production</strong><p>My day job, building AI products inside a regulated bank.</p></div>
+          </div>
+          <div className="signal-line">
+            <span className="signal-index">02</span>
+            <div><strong>Robin</strong><p>A phone agent that answers calls for owner-run businesses.</p></div>
+          </div>
+        </aside>
+      </section>
 
-      <footer className="site-footer">© {new Date().getFullYear()} Mark Fullbrook</footer>
-    </div>
+      <section className="work-section wrap" id="work">
+        <div className="section-intro">
+          <p className="section-kicker">The work</p>
+          <h2>What I’ve done so far.</h2>
+          <p>This is the short version. The full history is on my CV.</p>
+          <a className="text-link" href={CV} target="_blank" rel="noreferrer">Read my CV <ArrowIcon /></a>
+        </div>
+        <div className="timeline">
+          {career.map((item) => (
+            <article className="timeline-item" key={item.period}>
+              <span className="period">{item.period}</span>
+              <div><h3>{item.title}</h3><p>{item.detail}</p></div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="build-section" id="robin" aria-labelledby="building-title">
+        <div className="wrap build-grid">
+          <div className="section-intro">
+            <p className="section-kicker">Independent project</p>
+            <h2 id="building-title">Robin answers the phone when a small business can’t.</h2>
+          </div>
+          <div className="build-copy">
+            <p>Robin is an AI phone agent for owner-run businesses. It picks up the call, finds out what the caller needs, takes their details and tells them what happens next.</p>
+            <p>I’m building it on my own and testing it with small-business owners now.</p>
+            <a className="text-link" href={ROBIN} target="_blank" rel="noreferrer">Visit Robin <ArrowIcon /></a>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact">
+        <div className="wrap footer-grid">
+          <div><p className="section-kicker">Say hello</p><h2>Email is best, or find me on LinkedIn.</h2></div>
+          <div className="footer-links">
+            <EmailLink><ArrowIcon /></EmailLink>
+            <a href={LINKEDIN} target="_blank" rel="noreferrer">LinkedIn <ArrowIcon /></a>
+            <a href={GITHUB} target="_blank" rel="noreferrer">GitHub <ArrowIcon /></a>
+            <a href={CV} target="_blank" rel="noreferrer">CV <ArrowIcon /></a>
+          </div>
+        </div>
+        <div className="wrap colophon"><span>© {new Date().getFullYear()} Mark Fullbrook</span></div>
+      </footer>
+    </main>
   );
 }
