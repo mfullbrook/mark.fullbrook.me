@@ -79,6 +79,7 @@ const independentProjects: Project[] = [
     meta: "2026 · Open source",
     detail:
       "A local supervisor that turns a Linear issue into a reviewed pull request. Codex writes the tests, Claude writes the code, and I keep merge and deploy authority.",
+    link: { href: "https://github.com/mfullbrook/gaffer", label: "mfullbrook/gaffer" },
   },
   {
     name: "livekit-sdk",
@@ -98,12 +99,14 @@ const independentProjects: Project[] = [
     meta: "2026 · Personal tool",
     detail:
       "A tailnet index page that lists every HTTP service running on my machine, so I can open any of them from whichever device is in my hand.",
+    link: { href: "https://github.com/mfullbrook/porthole", label: "mfullbrook/porthole" },
   },
   {
     name: "Pennywise",
     meta: "2026 · Personal tool",
     detail:
       "Explains credit card bills from a local ledger reconciled to every statement. The arithmetic is deterministic, and the language model only explains it.",
+    link: { href: "https://github.com/mfullbrook/pennywise", label: "mfullbrook/pennywise" },
   },
 ];
 
@@ -182,7 +185,7 @@ export default function Home() {
           </div>
           <div className="signal-line">
             <span className="signal-index">03</span>
-            <div><strong>QuietStar</strong><p>Consulting: a knowledge base over past projects, to speed up quoting.</p></div>
+            <div><strong>QuietStar</strong><p>Consulting: a knowledge base over past projects, to scale the operations.</p></div>
           </div>
         </aside>
       </section>
