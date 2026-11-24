@@ -154,9 +154,9 @@ export default function Home() {
       <section className="hero wrap" id="top">
         <div className="hero-copy">
           <p className="status"><span aria-hidden="true" /> Mark Fullbrook · Principal generative AI engineer · London</p>
-          <h1>I build generative AI products at a bank.</h1>
+          <h1>I build AI systems that survive real data, real users and real constraints.</h1>
           <p className="intro">
-            Before this I led engineering teams across London, New York, Tel Aviv and Shanghai, and before that I helped run my family’s business. In my own time I’m building Robin, an AI phone agent for small businesses.
+            Right now I lead the engineering of an AI platform for Citi’s Markets teams, rolling out to 1,500 users. Before this I led engineering teams across London, New York, Tel Aviv and Shanghai, and before that I helped run my family’s business. In my own time I’m building Robin, an AI phone agent for small businesses.
           </p>
           <div className="hero-links">
             <a className="primary-link" href={LINKEDIN} target="_blank" rel="noreferrer">
